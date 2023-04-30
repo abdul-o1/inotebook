@@ -1,7 +1,8 @@
 const express = require('express');
 const router = express.Router();
 
-router.get('/', (req, res)=>{
+// ROUTE 1: Get all Notes using : GET "/api/notes/fetchallnotes". No login required
+router.get('/fetchallnotes', (req, res)=>{
     
     res.json([])
 } )
