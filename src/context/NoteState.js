@@ -14,7 +14,8 @@ const NoteState = (props) => {
       headers: {
         "Content-Type": "application/json",
         "auth-token":
-          "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjQ0OGU1MWNhNGQ1YmFhOTFkNDY0YTU3In0sImlhdCI6MTY4Mjg0NDUzOH0.uk42CdxPy6DlQKPF8VQ0F8EYpLE1t7Uy-OWX-I5sn64",
+         "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjQ0OGU1MWNhNGQ1YmFhOTFkNDY0YTU3In0sImlhdCI6MTY4NzA4Nzk4NX0.TToxiBedE4LwldPw2qLexcVUIBL0YjTvAKUBhgKR-VA"
+       
       },
     });
     const json = await response.json();
@@ -29,7 +30,9 @@ const NoteState = (props) => {
       headers: {
         "Content-Type": "application/json",
         "auth-token":
-          "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjQ0OGU1MWNhNGQ1YmFhOTFkNDY0YTU3In0sImlhdCI6MTY4Mjg0NDUzOH0.uk42CdxPy6DlQKPF8VQ0F8EYpLE1t7Uy-OWX-I5sn64",
+        
+           "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjQ0OGU1MWNhNGQ1YmFhOTFkNDY0YTU3In0sImlhdCI6MTY4NzA4Nzk4NX0.TToxiBedE4LwldPw2qLexcVUIBL0YjTvAKUBhgKR-VA"
+        
       },
       body: JSON.stringify({ title, description, tag }),
     });
@@ -44,7 +47,8 @@ const NoteState = (props) => {
       headers: {
         "Content-Type": "application/json",
         "auth-token":
-          "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjQ0OGU1MWNhNGQ1YmFhOTFkNDY0YTU3In0sImlhdCI6MTY4Mjg0NDUzOH0.uk42CdxPy6DlQKPF8VQ0F8EYpLE1t7Uy-OWX-I5sn64",
+        
+           "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjQ0OGU1MWNhNGQ1YmFhOTFkNDY0YTU3In0sImlhdCI6MTY4NzA4Nzk4NX0.TToxiBedE4LwldPw2qLexcVUIBL0YjTvAKUBhgKR-VA"
       },
     });
     const json = response.json();
