@@ -1,11 +1,11 @@
 import Note from "./Note.js";
 
-export const Home = () => {
+export const Home = (props) => {
+ const {showAlert} = props;
   return (
-    <div>
-      
-      <Note />
+    <div>  
+      <Note showAlert= {showAlert} />
     </div>
   );
 };
-export default Home;
+
