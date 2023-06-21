@@ -1,14 +1,21 @@
 import React from "react";
 import NoteContext from "../context/NoteContext";
 import { useContext, useEffect, useRef, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import Noteitem from "./Noteitem";
 import AddNote from "./AddNote";
 
-const Notes = () => {
+const Notes = (props) => {
   const context = useContext(NoteContext);
+  let Navigate = useNavigate();
+
   const { notes, getNotes, editNote } = context;
   useEffect(() => {
-    getNotes();
+    if (localStorage.getItem('token')) {
+      getNotes();
+    } else {
+      Navigate("/login");
+    }
     // eslint-disable-next-line
   }, []);
   const ref = useRef(null);
@@ -33,6 +40,7 @@ const Notes = () => {
   const handleClick = (e) => {
     editNote(note.id, note.etitle, note.edescription, note.etag);
     refClose.current.click();
+    props.showAlert("Edited succesfully", "success");
   };
 
   const onChange = (e) => {
@@ -41,7 +49,7 @@ const Notes = () => {
 
   return (
     <>
-      <AddNote />
+      <AddNote showAlert={props.showAlert} />
       <button
         ref={ref}
         type="button"
@@ -125,7 +133,9 @@ const Notes = () => {
                 Close
               </button>
               <button
-              disabled={note.etitle.length < 5 || note.edescription.length < 5}
+                disabled={
+                  note.etitle.length < 5 || note.edescription.length < 5
+                }
                 onClick={handleClick}
                 type="button"
                 className="btn btn-primary"
@@ -144,7 +154,12 @@ const Notes = () => {
         </div>
         {notes.map((note) => {
           return (
-            <Noteitem key={note._id} updateNote={updateNote} note={note} />
+            <Noteitem
+              key={note._id}
+              updateNote={updateNote}
+              showAlert={props.showAlert}
+              note={note}
+            />
           );
         })}
       </div>

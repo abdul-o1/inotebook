@@ -4,6 +4,7 @@ function Alert(props) {
   console.log(props.alert);
 
   const capitalize = (word) => {
+    if (word === "danger"){word = "error";}
     const lower = word.toLowerCase();
     return lower.charAt(0).toUpperCase() + lower.slice(1);
   };
@@ -17,7 +18,7 @@ function Alert(props) {
           <strong>{capitalize(props.alert.type)}</strong>: {props.alert.msg}
         </div>
       )}
-      {console.log('Alert rendered')}
+      {console.log("Alert rendered")}
     </div>
   );
 }

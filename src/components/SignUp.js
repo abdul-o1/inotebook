@@ -30,7 +30,7 @@ const SignUp = (props) => {
 
       }
       else{
-          props.showAlert("Invalidccredentials ","danger");
+          props.showAlert("Invalid Credentials ","danger");
       }
   }
 
