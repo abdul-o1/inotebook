@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import "../Login.css";
 
 
 const Login = (props) => {
@@ -37,42 +38,51 @@ const Login = (props) => {
   };
 
   return (
-    <div className="container mt-2">
-      <h2 className="my-3">Login to  use Inotebook</h2>
-      <form onSubmit={handleSubmit}>
-        <div className="mb-3">
-          <label htmlFor="email" className="form-label">
-            Email address
-          </label>
+    <div className ="container">
+	<div className ="screen">
+       
+		<div className ="screen__content">
+			<form  onSubmit={handleSubmit} className ="login">
+        <h3 style={{color: "#7875B5"}}>LOGIN</h3>
+				<div className ="login__field">
+					<i className ="login__icon fas fa-user"></i>
           <input
-            type="email"
-            className="form-control"
+            type="email" 
+            className ="login__input" placeholder="User name / Email"
             value={credentials.email}
             onChange={onChange}
             id="email"
             name="email"
             aria-describedby="emailHelp"
           />
-        </div>
-        <div className="mb-3">
-          <label htmlFor="password" className="form-label">
-            Password
-          </label>
-          <input
+				</div>
+				<div className ="login__field">
+					<i className ="login__icon fas fa-lock"></i>
+					<input
+          
             type="password"
-            className="form-control"
+            className ="login__input" placeholder="Password"
             value={credentials.password}
             onChange={onChange}
             name="password"
             id="password"
           />
-        </div>
-
-        <button type="submit" className="btn btn-primary">
-          Submit
-        </button>
-      </form>
-    </div>
+				</div>
+				<button className ="button login__submit">
+					<span className ="button__text">submit </span>
+					<i className ="button__icon fas fa-chevron-right"></i>
+				</button>				
+			</form>
+			
+		</div>
+		<div className ="screen__background">
+			<span className ="screen__background__shape screen__background__shape4"></span>
+			<span className ="screen__background__shape screen__background__shape3"></span>		
+			<span className ="screen__background__shape screen__background__shape2"></span>
+			<span className ="screen__background__shape screen__background__shape1"></span>
+		</div>		
+	</div>
+</div>
   );
 };
 
