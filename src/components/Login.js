@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import "../Login.css";
+import "../Style.css";
+
 
 
 const Login = (props) => {
@@ -38,17 +39,19 @@ const Login = (props) => {
   };
 
   return (
-    <div className ="container">
-	<div className ="screen">
+    
+
+    <div className ="container-1">
+	<div className ="screen-1">
        
-		<div className ="screen__content">
-			<form  onSubmit={handleSubmit} className ="login">
+		<div className ="screen__content-1">
+			<form  onSubmit={handleSubmit} className ="login-1">
         <h3 style={{color: "#7875B5"}}>LOGIN</h3>
-				<div className ="login__field">
-					<i className ="login__icon fas fa-user"></i>
+				<div className ="login__field-1">
+					<i className ="login__icon-1 fas fa-user"></i>
           <input
             type="email" 
-            className ="login__input" placeholder="User name / Email"
+            className ="login__input-1" placeholder="User name / Email"
             value={credentials.email}
             onChange={onChange}
             id="email"
@@ -56,30 +59,30 @@ const Login = (props) => {
             aria-describedby="emailHelp"
           />
 				</div>
-				<div className ="login__field">
-					<i className ="login__icon fas fa-lock"></i>
+				<div className ="login__field-1">
+					<i className ="login__icon-1 fas fa-lock"></i>
 					<input
           
             type="password"
-            className ="login__input" placeholder="Password"
+            className ="login__input-1" placeholder="Password"
             value={credentials.password}
             onChange={onChange}
             name="password"
             id="password"
           />
 				</div>
-				<button className ="button login__submit">
+				<button className ="button login__submit-1">
 					<span className ="button__text">submit </span>
-					<i className ="button__icon fas fa-chevron-right"></i>
+					<i className ="button__icon-1 fas fa-chevron-right"></i>
 				</button>				
 			</form>
 			
 		</div>
-		<div className ="screen__background">
-			<span className ="screen__background__shape screen__background__shape4"></span>
-			<span className ="screen__background__shape screen__background__shape3"></span>		
-			<span className ="screen__background__shape screen__background__shape2"></span>
-			<span className ="screen__background__shape screen__background__shape1"></span>
+		<div className ="screen__background-1">
+			<span className ="screen__background__shape-1 screen__background__shape4-1"></span>
+			<span className ="screen__background__shape-1 screen__background__shape3-1"></span>		
+			<span className ="screen__background__shape-1 screen__background__shape2-1"></span>
+			<span className ="screen__background__shape-1 screen__background__shape1-1"></span>
 		</div>		
 	</div>
 </div>
